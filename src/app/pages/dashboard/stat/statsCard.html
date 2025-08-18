@@ -1,0 +1,56 @@
+<!-- Stats cards grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+  <!-- Total Tasks -->
+  <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+    <div class="flex flex-row items-center justify-between pb-2">
+      <span class="text-sm font-medium text-gray-600">Total Tasks</span>
+      <!-- Bar Chart Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <line x1="12" y1="20" x2="12" y2="10" stroke-width="2" stroke-linecap="round"/>
+        <line x1="6" y1="20" x2="6" y2="14" stroke-width="2" stroke-linecap="round"/>
+        <line x1="18" y1="20" x2="18" y2="6" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="text-2xl font-bold">{{ stats.total }}</div>
+  </div>
+
+  <!-- Completed -->
+  <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+    <div class="flex flex-row items-center justify-between pb-2">
+      <span class="text-sm font-medium text-gray-600">Completed</span>
+      <!-- Check Circle Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <circle cx="12" cy="12" r="10" stroke-width="2"/>
+        <path d="M9 12l2 2l4-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="text-2xl font-bold text-green-600">{{ stats.completed }}</div>
+  </div>
+
+  <!-- In Progress -->
+  <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+    <div class="flex flex-row items-center justify-between pb-2">
+      <span class="text-sm font-medium text-gray-600">In Progress</span>
+      <!-- Clock Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <circle cx="12" cy="12" r="10" stroke-width="2"/>
+        <path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="text-2xl font-bold text-blue-600">{{ stats.inProgress }}</div>
+  </div>
+
+  <!-- Pending -->
+  <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+    <div class="flex flex-row items-center justify-between pb-2">
+      <span class="text-sm font-medium text-gray-600">Pending</span>
+      <!-- Alert Circle Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <circle cx="12" cy="12" r="10" stroke-width="2"/>
+        <line x1="12" y1="8" x2="12" y2="12" stroke-width="2" stroke-linecap="round"/>
+        <line x1="12" y1="16" x2="12.01" y2="16" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="text-2xl font-bold text-orange-600">{{ stats.pending }}</div>
+  </div>
+</div>

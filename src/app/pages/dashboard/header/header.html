@@ -1,0 +1,77 @@
+<!-- header.component.html -->
+<header class="bg-white border-b border-gray-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+
+      <!-- Left: Logo and Title -->
+      <div class="flex items-center">
+        <a routerLink="/dashboard" class="flex items-center space-x-3">
+          <div class="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl">
+            <!-- Replace with Angular SVG icon or component -->
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM10 17l-5-5 1.414-1.414L10 14.172l7.586-7.586L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h1 class="text-2xl font-bold text-gray-900">Task Manager</h1>
+        </a>
+      </div>
+
+      <!-- Right: New Task Button + User Dropdown -->
+      <div class="flex items-center space-x-4">
+
+        <!-- New Task Button -->
+        <button
+          (click)="goToNewTask()"
+          class="flex items-center px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-md font-medium"
+        >
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+          </svg>
+          New Task
+        </button>
+
+          <!-- User Dropdown -->
+          <!-- User Dropdown -->
+          <div class="relative user-menu">
+            <button (click)="toggleDropdown()" class="relative h-10 w-10 rounded-full focus:outline-none">
+              <div class="h-10 w-10 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white font-medium">
+               {{ getInitial(currentUser?.name) }}
+
+              </div>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div
+              *ngIf="dropdownOpen"
+              class="absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-md shadow-lg z-50 transition-all duration-150"
+            >
+            <div class="flex items-center gap-2 p-2 pt-4 pl-4">
+              <div class="flex flex-col space-y-1 leading-none">
+                <p class="font-medium">{{ currentUser?.name }}</p>
+                <p class="w-[200px] truncate text-sm text-gray-500">{{ currentUser?.email }}</p>
+              </div>
+            </div>
+            <hr class="border-gray-200 my-1" />
+            <a class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user mr-2 h-4 w-4" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              Profile
+            </a>
+            <a class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings mr-2 h-4 w-4" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              Settings
+            </a>
+            <hr class="border-gray-200 my-1" />
+            <button
+              (click)="logout()"
+              class="flex items-center px-4 py-2 text-red-600 hover:bg-gray-100 w-full text-left cursor-pointer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out mr-2 h-4 w-4" aria-hidden="true"><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path></svg>
+              Sign out
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
