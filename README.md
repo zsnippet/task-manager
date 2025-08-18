@@ -1,60 +1,86 @@
-# TaskManager
+# Angular Task Manager
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+A simple **Task Management Application** built with **Angular** and **Tailwind CSS**.
+The app enables users to create, update, search, filter, and sort tasks with a clean and responsive UI.
+It follows a structured Angular architecture using **components**, **services**, and **signals** for state management.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
 
-```bash
-ng serve
+* **Task CRUD** – Add, Edit, and Delete tasks
+* **Status Tracking** – Manage tasks as `Pending`, `In Progress`, or `Completed`
+* **Search & Filter** – Search tasks by title or filter by status
+* **Sorting** – Sort tasks by due date or task ID (ascending/descending)
+* **Responsive UI** – Modern design powered by TailwindCSS
+
+---
+
+## 📸 Preview
+
+![Login Page Screenshot](./public/login.png)
+![App Screenshot](./public/dashboard.png)
+
+---
+
+## 🛠️ Tech Stack
+
+* [Angular](https://angular.dev/) – Frontend framework
+* [Tailwind CSS](https://tailwindcss.com/) – Styling
+* [TypeScript](https://www.typescriptlang.org/) – Strongly typed JavaScript
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/angular-task-manager.git
+   cd angular-task-manager
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   ng serve
+   ```
+
+4. Open your browser at:
+
+   ```
+   http://localhost:4200
+   ```
+
+---
+
+## 📂 Project Structure
+
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+src/
+ ├── app/
+ │   ├── components/       # Reusable UI components
+ │   ├── services/         # Business logic & state management
+ │   ├── models/           # Interfaces & data types
+ │   ├── app.component.ts  # Root component
+ │   └── app.module.ts     # Main Angular module
+ └── assets/               # Static files (icons, images, etc.)
 ```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🤝 Contributing
 
-```bash
-ng generate --help
-```
+Contributions, issues, and feature requests are welcome.
+Fork the repository and submit a pull request to improve the project.
 
-## Building
+---
 
-To build the project run:
+## 📜 License
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# task-manager
+This project is licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.

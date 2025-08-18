@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth-guard';
 import { LogoutComponent } from './pages/logout/logout';
+import { Login } from './pages/login/login';
 
 export const routes: Routes = [
   { 
@@ -9,10 +10,11 @@ export const routes: Routes = [
     pathMatch: 'full' 
   },
   { 
-    path: 'login', 
-    loadComponent: () => import('./pages/login/login').then(m => m.Login)
+    path: 'login', component: Login 
   },
-  { path: 'logout', component: LogoutComponent },
+  { path: 'logout', component: LogoutComponent 
+
+  },
   { 
     path: 'dashboard', 
     loadComponent: () => import('./pages/dashboard/dashboard').then(m => m.Dashboard),
