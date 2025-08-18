@@ -65,12 +65,24 @@ It follows a structured Angular architecture using **components**, **services**,
 ```
 src/
  ├── app/
- │   ├── components/       # Reusable UI components
- │   ├── services/         # Business logic & state management
- │   ├── models/           # Interfaces & data types
- │   ├── app.component.ts  # Root component
- │   └── app.module.ts     # Main Angular module
- └── assets/               # Static files (icons, images, etc.)
+ │   ├── pages/              # Feature pages (dashboard, login, logout, etc.)
+ │   │   ├── dashboard/      # Dashboard feature module/components
+ │   │   │   ├── header/     
+ │   │   │   ├── stat/       
+ │   │   │   ├── todo-list/  
+ │   │   │   └── dashboard.ts
+ │   │   ├── login/          
+ │   │   └── logout/         
+ │   │
+ │   ├── components/         # Reusable UI components (shared across pages)
+ │   ├── services/           # Business logic & API state management (auth, todo, etc.)
+ │   ├── models/             # Interfaces & data types (Todo, TaskStats, User, etc.)
+ │   ├── guards/             # Route guards (AuthGuard, etc.)
+ │   ├── app.routes.ts       # Central routing configuration
+ │   ├── app.component.ts    # Root component
+ │   └── app.config.ts       # Application-level config (providers, bootstrap)
+ │
+ └── assets/                 # Static files (icons, images, etc.)
 ```
 ---
 
