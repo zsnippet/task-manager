@@ -27,8 +27,6 @@ It follows a structured Angular architecture using **components**, **services**,
 
 * [Angular](https://angular.dev/) – Frontend framework
 * [Tailwind CSS](https://tailwindcss.com/) – Styling
-* [TypeScript](https://www.typescriptlang.org/) – Strongly typed JavaScript
-
 ---
 
 ## ⚙️ Installation & Setup
