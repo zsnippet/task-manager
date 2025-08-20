@@ -34,8 +34,8 @@ It follows a structured Angular architecture using **components**, **services**,
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/angular-task-manager.git
-   cd angular-task-manager
+   git clone https://github.com/zsnippet/task-manager.git
+   cd task-manager
    ```
 
 2. Install dependencies:
